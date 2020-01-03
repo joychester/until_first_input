@@ -12,9 +12,9 @@ let time_to_first_input = function() {
     console.log(`First contentful paint duration since page navigation start: ${fcp_time}`);
     console.log(`User first input since first contentful piant: ${current_time - fcp_time}`);
 
-    if (perf.getEntriesByType('mark')) {
 
-      let user_marks = perf.getEntriesByType('mark');
+    let user_marks = perf.getEntriesByType('mark');
+    if (user_marks.length > 0) {
       let last_user_mark_time = Math.floor(user_marks[user_marks.length - 1].startTime);
       console.log(`Performance mark duration since page navigation start: ${last_user_mark_time}`);
       console.log(`User first input since lastest performance mark: ${current_time - last_user_mark_time}`);
@@ -26,8 +26,8 @@ let time_to_first_input = function() {
           let fid_process_start = Math.floor(fid_time[0].processingStart);
           let fid_process_end = Math.floor(fid_time[0].processingEnd);
           console.log(`First input event since page navigation start: ${fid_start_time}`);
-          console.log(`First input delay: ${fid_process_start - fid_start_time}`);
-          console.log(`First input processing time: ${fid_process_end - fid_process_start}`)
+          console.log(`First input delay: ${fid_process_start-fid_start_time}`);
+          console.log(`First input processing time: ${fid_process_end-fid_process_start}`)
         }
       }, 2000);
     }
