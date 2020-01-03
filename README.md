@@ -7,4 +7,5 @@ User Input events including:
 - zoom
 - tap
 
+A good expaination on FID in following picture by Philip Walton : https://web.dev/fid/
 ![](fid-full.svg)
