@@ -6,3 +6,5 @@ User Input events including:
 - scoll
 - zoom
 - tap
+
+![](fid-full.svg)
