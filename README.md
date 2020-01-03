@@ -1,4 +1,4 @@
-# until_first_input
+# until_first_input ( Time to first input )
 measrure page performance until user first input event triggered
 
 User Input events including: 
