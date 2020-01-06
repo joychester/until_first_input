@@ -28,7 +28,8 @@ let time_to_first_input = function() {
         let fid_process_end = Math.floor(fid_time[0].processingEnd);
         console.log(`First input event since page navigation start: ${fid_start_time}`);
         console.log(`First input delay: ${fid_process_start-fid_start_time}`);
-        console.log(`First input processing time: ${fid_process_end-fid_process_start}`)
+        console.log(`First input processing time: ${fid_process_end-fid_process_start}`);
+        console.log(`First ux input delay: ${current_time-fid_process_start}`);
       }
     }, 2000);
     
