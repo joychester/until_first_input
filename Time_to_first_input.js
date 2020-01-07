@@ -5,7 +5,7 @@ let time_to_first_input = function() {
   const perf = window.performance;
   const current_time = Math.floor(perf.now());
 
-  console.log(`user first input since page navigation start: ${current_time}`);
+  console.log(`User first input since page navigation start: ${current_time}`);
 
   if(perf && perf.timing && perf.getEntriesByType) {
     let fcp_time = Math.floor(perf.getEntriesByName('first-contentful-paint')[0].startTime);
