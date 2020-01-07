@@ -31,7 +31,7 @@ let time_to_first_input = function() {
         console.log(`First input processing time: ${fid_process_end-fid_process_start}`);
         console.log(`First ux input delay: ${current_time-fid_process_start}`);
       }
-    }, 2000);
+    }, 1000);
     
   } else {
     console.log("performance object is not supported by current browser, remove the event listener anyway...");
