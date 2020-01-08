@@ -2,10 +2,8 @@
 measrure page performance until user first input event triggered
 
 User Input events including: 
-- mouse click
-- scoll
-- zoom
-- tap
+- mouse events (click, double click)
+- wheel events (scroll, zoom)
 
 A good expaination on FID in following picture by Philip Walton : https://web.dev/fid/
 ![](fid-full.svg)
