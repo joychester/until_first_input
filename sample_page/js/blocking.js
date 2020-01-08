@@ -19,6 +19,5 @@ function calculatePrimes(iterations, multiplier) {
 
 function doPointlessComputationsWithBlocking() {
   var primes = calculatePrimes(iterations, multiplier);
-  pointlessComputationsButton.disabled = false;
   console.log(primes);
 }
