@@ -7,6 +7,7 @@ User Input events including:
 
 A good expaination on FID in following picture by Philip Walton : https://web.dev/fid/
 ![](fid-full.svg)
+The Event Timing API(performance.getEntriesByType('first-input');) supported since Chrome 77+
 
 Reference: 
 Sample pages borrowed from Mozilla Developer Network: http://mdn.github.io/performance-scenarios/js-worker/index.html
