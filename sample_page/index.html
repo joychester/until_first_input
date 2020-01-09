@@ -45,6 +45,7 @@
             //remove the eventlistener once user either conduct 'click' or 'scroll' on the page
             window.removeEventListener('scroll', time_to_first_input);
             window.removeEventListener('click', time_to_first_input);
+            window.removeEventListener('keydown', time_to_first_input);
 
             // To-DO: will use the fetch API to bring those data back to logging server
 
@@ -52,6 +53,7 @@
 
         window.addEventListener('scroll', time_to_first_input);
         window.addEventListener('click', time_to_first_input);
+        window.addEventListener('keydown', time_to_first_input);
     </script>
 </head>
 
@@ -60,7 +62,7 @@
 
     <input id="start-stop" type="button" name="start-stop" value="Fast running js simulation" />
     
-    <input type="text" class="input-text" placeholder="try to feed me some text">
+    <input type="text" class="input-text" placeholder="try to feed me some text" autofocus>
 
     <div id="container">
         <div class="moving-box"></div>
