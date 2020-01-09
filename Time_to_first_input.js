@@ -10,10 +10,12 @@ let time_to_first_input = function (event) {
         console.log(`User first input [${event.type}] since page navigation start: ${current_time}`);
 
 
-        let fcp_time = Math.floor(perf.getEntriesByName('first-contentful-paint')[0].startTime);
-        console.log(`First contentful paint(FCP) duration since page navigation start: ${fcp_time}`);
-        console.log(`User first input [${event.type}] since first contentful piant: ${current_time - fcp_time}`);
-
+        let fcp_entry = perf.getEntriesByName('first-contentful-paint');
+        if (fcp_entry.length > 0) {
+            let fcp_time = Math.floor(fcp_entry[0].startTime);
+            console.log(`First contentful paint(FCP) duration since page navigation start: ${fcp_time}`);
+            console.log(`User first input [${event.type}] since first contentful piant: ${current_time - fcp_time}`);
+        }
 
         let user_marks = perf.getEntriesByType('mark');
         if (user_marks.length > 0) {
