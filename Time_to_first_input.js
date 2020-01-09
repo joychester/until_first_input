@@ -39,6 +39,7 @@ let time_to_first_input = function() {
   //remove the eventlistener once user either conduct 'click' or 'scroll' on the page
   window.removeEventListener('scroll', time_to_first_input);
   window.removeEventListener('click', time_to_first_input);
+  window.removeEventListener('keydown', time_to_first_input);
 
   // To-DO: will use the fetch API to bring those data back to logging server
 
@@ -46,3 +47,4 @@ let time_to_first_input = function() {
 
 window.addEventListener('scroll', time_to_first_input);
 window.addEventListener('click', time_to_first_input);
+window.addEventListener('keydown', time_to_first_input);
