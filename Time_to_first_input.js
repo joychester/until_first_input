@@ -3,11 +3,13 @@
 let time_to_first_input = function() {
 
   const perf = window.performance;
-  const current_time = Math.floor(perf.now());
 
   console.log(`User first input since page navigation start: ${current_time}`);
 
-  if(perf && perf.timing && perf.getEntriesByType) {
+  if(perf && perf.getEntriesByType) {
+    
+    const current_time = Math.floor(perf.now());
+    
     let fcp_time = Math.floor(perf.getEntriesByName('first-contentful-paint')[0].startTime);
     console.log(`First contentful paint duration since page navigation start: ${fcp_time}`);
     console.log(`User first input since first contentful piant: ${current_time - fcp_time}`);
