@@ -1,6 +1,6 @@
 'use strict';
 
-let time_to_first_input = function (event) {
+let time_to_first_input = function(event) {
 
     const perf = window.performance;
 
